@@ -31,10 +31,11 @@ private ["_civ", "_myman","_mrkciv","_SideHQ","_gp1","_dir","_spawnLoc","_sl","_
 	_building = createVehicle [_slumHouse, _newpos, [], 0, "CAN_COLLIDE"];
 	_building setVectorUp [0,0,1];
 	_building setDir random 360;
+	
+	// civilan, change this to meet your needs. 
 	_MenArray = ["LOP_Tak_Civ_Random"];
 	_myman = selectRandom _MenArray;
 
-	//"O_officer_F" createUnit [getpos _jinkObj1, _gp1,"hvt=this", _skill, "MAJOR"];
 	_civ = _gp1 createUnit [_myman,  _loc, [], 0, "NONE"];
 	_civ setPos getpos _building;
 	_civ disableAI "MOVE";
